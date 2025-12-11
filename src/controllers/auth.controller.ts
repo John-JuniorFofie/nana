@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 // import type{CustomJwtPayload} from '../types/authRequest.ts';
 import dotenv from "dotenv";
-import UserModel from '../models/user.model';
+import UserModel from '../model/user.model';
 
 
 dotenv.config();
@@ -149,7 +149,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
         const accessToken = jwt.sign({
             userId: existingUser._id,
             email: existingUser.email,
-            role: existingUser.role
+            
         }, ACCESS_TOKEN_SECRET as string, {expiresIn: '1h'});
 
         //Remove password before sending a response

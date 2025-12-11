@@ -10,7 +10,9 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
+      "noEmit": true,
+    "allowImportingTsExtensions": true,
   },
   "include": ["src/**/*"]
 }

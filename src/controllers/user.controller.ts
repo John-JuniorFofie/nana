@@ -1,6 +1,6 @@
 import type { Response } from "express";
 import type { AuthRequest } from "../types/authRequest";
-import User from "../models/user.model";
+import User from "../model/user.model";
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
 
