@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 // import type{CustomJwtPayload} from '../types/authRequest.ts';
 import dotenv from "dotenv";
+import UserModel from '../models/user.model';
 
 
 dotenv.config();
