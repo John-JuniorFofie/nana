@@ -33,14 +33,6 @@ export const register = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    if (!userName) {
-      res.status(400).json({
-        success: false,
-        message: "Username is required and must be unique",
-      });
-      return;
-    }
-
     if (password.length < 8) {
       res.status(400).json({
         success: false,
@@ -49,15 +41,6 @@ export const register = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    // CHECK EXISTING USERNAME
-    const existingUsername = await UserModel.findOne({ userName });
-    if (existingUsername) {
-      res.status(400).json({
-        success: false,
-        message: "Username already exists, choose another one.",
-      });
-      return;
-    }
 
     // CHECK EXISTING EMAIL
     const existingUser = await UserModel.findOne({ email });
