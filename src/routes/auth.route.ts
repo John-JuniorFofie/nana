@@ -28,7 +28,6 @@ const router = express.Router();
  *             required:
  *               - fullName
  *               - userName
- *               - role
  *               - email
  *               - password
  *             properties:
@@ -38,10 +37,7 @@ const router = express.Router();
  *               userName:
  *                 type: string
  *                 example: "john_fofie"
- *               role:
- *                 type: string
- *                 enum: [Leaner, Facilitator, Admin]
- *                 example: "Learner"
+ *         
  *               email:
  *                 type: string
  *                 format: email
@@ -124,7 +120,6 @@ router.post("/register", register);
  *               user:
  *                 id: "66ef0c7892adf92b1c33ab1a"
  *                 email: "john.fofie@example.com"
- *                 role: "Rider"
  *       400:
  *         description: Invalid credentials or missing fields.
  *         content:
