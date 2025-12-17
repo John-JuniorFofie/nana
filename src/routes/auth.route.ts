@@ -27,7 +27,6 @@ const router = express.Router();
  *             type: object
  *             required:
  *               - fullName
- *               - userName
  *               - email
  *               - password
  *             properties:
@@ -53,7 +52,6 @@ const router = express.Router();
  *               data:
  *                 id: "66ef0c7892adf92b1c33ab1a"
  *                 email: "john.fofie@example.com"
- *                 userName: "john_fofie"
  *       200:
  *         description: Account restored successfully.
  *         content:

@@ -59,7 +59,6 @@ export const register = async (req: Request, res: Response): Promise<void> => {
     // CREATE USER
     const newUser = await UserModel.create({
       fullName,
-      userName,
       email,
       password: hashedPassword,
     });
