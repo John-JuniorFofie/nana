@@ -37,7 +37,6 @@ const router = express.Router();
  *               userName:
  *                 type: string
  *                 example: "john_fofie"
- *         
  *               email:
  *                 type: string
  *                 format: email
