@@ -22,7 +22,7 @@ if (!ACCESS_TOKEN_SECRET) {
 //@access Public
 export const register = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { fullName, userName, email, password } = req.body;
+    const { fullName,email, password } = req.body;
 
     // VALIDATION
     if (!fullName || !email || !password) {
@@ -70,7 +70,6 @@ export const register = async (req: Request, res: Response): Promise<void> => {
       user: {
         id: newUser._id,
         fullName: newUser.fullName,
-        userName: newUser.userName,
         email: newUser.email,
       },
     });

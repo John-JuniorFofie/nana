@@ -3,7 +3,6 @@ import mongoose, { Schema, Document, Model } from 'mongoose';
 
 export interface IUser extends Document {
     fullName: string;
-    userName: string;
     email: string;
     password: string;
     phoneNumber?:String;
